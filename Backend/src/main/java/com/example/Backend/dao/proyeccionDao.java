@@ -3,6 +3,7 @@ package com.example.Backend.dao;
 import com.example.Backend.models.proyeccionModel;
 
 import java.util.List;
+import java.util.Map;
 
 public interface proyeccionDao {
 
@@ -19,4 +20,6 @@ public interface proyeccionDao {
     void deleteproyeccion(Long id_proyeccion);
 
     void editClliente(proyeccionModel proyeccion, Long id_proyeccion);
+
+    Map<String, Object> realizarproyeccion(int precio, int mensualidad);
 }

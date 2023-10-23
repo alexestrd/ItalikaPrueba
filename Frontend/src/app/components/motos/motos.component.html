@@ -1,1 +1,17 @@
-<p>motos works!</p>
+<div class="col d-flex justify-content-between">
+  <div *ngFor="let moto of motos">
+    <div class="card mt-3 mx-2" style="width: 10rem">
+      <img
+        src="https://elektra.vtexassets.com/arquivos/ids/3012108/34004912.jpg?v=637554220060170000"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <h5 class="card-title">{{ moto.modelo }}</h5>
+        <p class="card-text">{{ moto.version }}</p>
+        <a href="#" class="btn btn-primary" (click)="precios(moto)" routerLink="/costo">Ver precios</a>
+      </div>
+    </div>
+  </div>
+</div>
+

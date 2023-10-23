@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
+import java.util.Objects;
 
 @RestController
 public class proyeccionCrontroller {
@@ -41,4 +43,11 @@ public class proyeccionCrontroller {
     public void editproyeccion(@RequestBody proyeccionModel proyeccion, @PathVariable Long id_proyeccion){
         ProyeccionDao.editClliente(proyeccion, id_proyeccion);
     }
+    @RequestMapping(value = "api/proyeccion/realizar", method = RequestMethod.POST)
+    public Map<String, Object> realizarproyeccion(@RequestBody Map<String, Object> datos) {
+        int precio = Integer.parseInt(datos.get("precio").toString());
+        int mensualidad = (int) datos.get("mensualidades");
+        return ProyeccionDao.realizarproyeccion(precio, mensualidad);
+    }
+
 }

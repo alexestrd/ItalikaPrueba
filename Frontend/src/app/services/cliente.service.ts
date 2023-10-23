@@ -17,5 +17,7 @@ export class ClienteService {
   obtenerCliente(id:string){
     return this.http.get(`${this.Url}/cliente/{id}`)
   }
-  registrarCliente()
+  registrarCliente(){
+    
+  }
 }

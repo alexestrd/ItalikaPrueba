@@ -1,1 +1,62 @@
-<p>cotizacion works!</p>
+<div class="row">
+    <div class="col">
+        <div>
+            <table class="table" style="margin-bottom: 50px;">
+                <thead>
+                    <tr>
+                        <th scope="col">Modelo</th>
+                        <th scope="col">Version</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Precio Accesorio</th>
+                        <th scope="col">Seguro</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <td>{{Datos.modelo}}</td>
+                    <td>{{Datos.version}}</td>
+                    <td>{{precio}}</td>
+                    <td>{{accesorio}}</td>
+                    <td>{{seguro}}</td>
+                </tbody>
+            </table>
+            <div class="row mt-4">
+                <div class="col">
+                    <select class="form-select" (change)="valormen($event)" aria-label="Default select example">
+                        <option selected value="0">Mesnusalidades</option>
+                        <option value="24">24</option>
+                        <option value="30">30</option>
+                        <option value="36">36</option>
+                        <option value="42">42</option>
+                        <option value="48">48</option>
+                        <option value="54">54</option>
+                        <option value="60">60</option>
+                      </select>
+                </div>
+                  <div class="col">
+                    <button type="button" class="btn btn-dark" (click)="proyeccion()">Realizar Proyeccion</button>
+                  </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<div>
+    <table class="table table-bordered mt-4" style="margin-bottom: 50px;">
+        <thead>
+            <tr>
+                <th scope="col">Menses</th>
+                <th scope="col">Enganche</th>
+                <th scope="col">Mensualidades</th>
+                <th scope="col">Tasa Anual</th>
+                <th scope="col">Tasa Mensual</th>
+            </tr>
+        </thead>
+        <tbody>
+            <td>{{mensuali}}</td>
+            <td>{{proyec.enganche}}</td>
+            <td>{{proyec.mensualidades}}</td>
+            <td>%{{tasaA}}</td>
+            <td>%{{tasaM}}</td>
+        </tbody>
+    </table>
+</div>

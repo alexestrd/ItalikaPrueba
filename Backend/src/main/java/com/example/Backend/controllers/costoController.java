@@ -21,7 +21,7 @@ public class costoController {
         return CostoDao.getcostos();
     }
 
-    @RequestMapping(value = "api/costo/{id_categoria}", method = RequestMethod.GET)
+    @RequestMapping(value = "api/costo/{id_costo}", method = RequestMethod.GET)
     public List<costoModel> getcosto(@PathVariable Long id_costo){
         List<costoModel> costo = CostoDao.getcosto(id_costo);
         return costo;
